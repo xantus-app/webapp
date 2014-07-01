@@ -8,10 +8,13 @@
  * Controller of the webappApp
  */
 angular.module('webappApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, User) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+    $scope.userinfo = User.get({ "Id": "1" });
+
   });
